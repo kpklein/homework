@@ -34,8 +34,7 @@ $(document).ready(function(){
 	});
 
 	function checkIfPlayerWon(symbol){
-		// x
-		// o
+		
 
 		if($('.sq1').hasClass(symbol) && $('.sq2').hasClass(symbol) && $('.sq3').hasClass(symbol)) {
 			return true;

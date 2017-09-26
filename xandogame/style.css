@@ -5,8 +5,7 @@
 }
 
 .row {
-	/*clear:both;
-	overflow: hidden;*/
+	
 }
 
 .square {
@@ -26,6 +25,7 @@
 .x{
 	
 	background-image: url(images/x.png);
+	
 	     
 }
 
