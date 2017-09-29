@@ -1,0 +1,17 @@
+<h1><%= @page_header %></h1>
+	
+<% @shopping_item.each_with_index do |shopping, index|%>
+
+
+	<h2> Shopping: <%= shopping[:title] %></h2>
+	<p><%= shopping[:body] %></p>
+	<a href="/shopping_item/<%= index %>">View</a>
+	<a href="/shopping_item/<%= index %>">Edit</a>
+
+
+	<form action="/shopping_item/<%= index %>" method="POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="DELETE"></form>
+
+<% end %>
+ 
