@@ -1,0 +1,12 @@
+<h1>Countries#index</h1>
+
+
+<% @country.each do |country| %>
+
+	<h2><%= country.title %></h2>
+	<p><%= country.desc%> - <strong><%= country.age_r%></strong></p>
+	<a href="/country/<%= country.id %>">Show page</a>
+	<a href="/country/<%= country.id %>/edit">Edit page</a>
+	
+
+<% end %>

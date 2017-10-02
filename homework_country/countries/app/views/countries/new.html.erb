@@ -1,0 +1,15 @@
+<h1>Countries#new</h1>
+<h1>Add a new Country</h1>
+<%= form_for(@Country) do |Country| %>
+    
+    <%= token_tag %>
+      <%= country.label :name %>
+      <%= country.text_field :name%>
+      <%= country.label :population %>
+      <%= country.text_field :population%>
+      <%= country.label :language %>
+      <%= country.text_field :language%>
+      <%= country.label :president %>
+      <%= country.text_field :president%>
+      <%= country.submit "Save changes"%>
+<% end %>
