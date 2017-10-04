@@ -1,0 +1,12 @@
+<p>Username: <%= comment.username %> - <em><%= comment.body %></em>
+
+
+<%= link_to "Show Page", post_comment_path(@post, comment) unless controller_name == "comments" %>
+
+<%= link_to "Edit", post_comment_path(@post, comment) if controller_name == "comments" %>
+
+<%= link_to "Delete Post", post_comment_path(@post),method: :delete, data: { confirm: "Are you sure?" } %>
+
+
+
+</p>
