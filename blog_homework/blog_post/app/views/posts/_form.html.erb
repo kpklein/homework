@@ -1,4 +1,24 @@
-<%= form_for([@post, @comment])do |f| %>
+<% if @comments.errors.any? %>
+
+  <h3><%= pluralize(@comments.errors.count, "error") %> prohibited this comment from being saved:</h3>
+
+
+  <ul>
+    <% @comment.errors.full_messages.each do |msg| %>
+    <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+
+<% end %>
+
+
+
+
+
+
+
+
+<%= form_for([@post])do |f| %>
 	
 	<%= f.label :title %>
 	<%= f.text_field :title %>
@@ -8,8 +28,5 @@
 	
 
 	<%= f.submit %>
-
-
-
 
 <% end %>
